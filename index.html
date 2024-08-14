@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><img src="Imagens/logo.jpg" alt=""></h1>
+            <nav>
+                <a href="#" onclick="showCategory('burgers')">Hambúrgueres</a>
+                <a id="a" href="#" onclick="showCategory('acompanhamentos') ">Acompanhamentos</a>
+                <a href="#" onclick="showCategory('bebidas')">Bebidas</a>
+                <a id="so" href="#" onclick="showCategory('sobremesas')">Sobremesas</a>
+                <a href="#" onclick="showCategory('sanduiches')">Sanduíches</a>
+                <a id="sa" href="#" onclick="showCategory('saladas')">Saladas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="menu-items"></section>
+        <aside id="cart">
+            <h2>Carrinho</h2>
+            <div id="cart-items"></div>
+            <button class="btn" onclick="finalizeOrder()">Finalizar Pedido</button>
+        </aside>
+    </main>
+
+    <div id="order-summary" class="modal">
+        <div class="modal-content">
+            <h2>Resumo do Pedido</h2>
+            <div id="order-details"></div>
+            <form id="order-form">
+                <label for="full-name">Nome Completo:</label>
+                <input type="text" id="full-name" required>
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" required>
+                <label for="phone">Número de Telefone:</label>
+                <input type="tel" id="phone" required>
+                <fieldset>
+                    <legend>Forma de Pagamento:</legend>
+                    <label for="card">Cartão</label>
+                    <input type="radio" id="card" name="payment" value="cartão" required>
+                    <label for="pix">Pix</label>
+                    <input type="radio" id="pix" name="payment" value="pix" required>
+                </fieldset>
+                <button type="button" class="btn btn-confirm" onclick="confirmOrder()">Confirmar Pedido</button>
+                <button type="button" class="btn btn-cancel" onclick="cancelOrder()">Cancelar</button>
+                <button type="button" class="btn btn-close" onclick="closeModal()">Fechar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
