@@ -224,4 +224,18 @@ legend {
         border-top: 2px solid #ddd;
         margin-top: 1rem;
     }
+    nav a {
+        color: rgb(110, 36, 36);
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    #so{
+        margin-left: 69px;
+        
+    }
+    #sa{
+        margin-left: 40px;
+    }
 }
